@@ -45,6 +45,9 @@ def main(folder, temp):
 
     print("Downloading MC4 dataset...")
     subprocess.run(['python3', 'c4_extractor.py', '--data_dir', temp, '--output_dir', folder])
+    
+    print("Cleaning the c4 repo...")
+    subprocess.run(['sudo', 'rm', '-r', 'c4'])
 
 if __name__ == "__main__":
     main()
