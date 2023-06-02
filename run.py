@@ -1,12 +1,12 @@
 import subprocess
-import os, shututil, click
+import os, shutil, click
 
 @click.command()
-@click.folder("--folder", default="../../../data/mc4/0_raw", help="Destination folder where to write")
-@click.folder("--temp", default="../../../_temp", help="Temporary folder used to extract archives")
-@click.folder("--overwrite", is_flag=True, help="Clean and start from scratch")
+@click.option("--folder", default="../../../data/mc4/0_raw", help="Destination folder where to write")
+@click.option("--temp", default="../../../_temp", help="Temporary folder used to extract archives")
+@click.option("--overwrite", is_flag=True, help="Clean and start from scratch")
 
-def main(folder, temp):
+def main(folder, temp, overwrite):
     folder = os.path.abspath(folder)
     temp = os.path.abspath(temp)
 
