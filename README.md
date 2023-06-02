@@ -23,7 +23,7 @@ cd corpus_downloader_mc4
 To download the datasets, run the script in the terminal as follows:
 
 ```bash
-./run.sh
+python run.py
 ```
 This script will download the Common Crawl datasets and store them in the data/ directory of the current repo.
 
