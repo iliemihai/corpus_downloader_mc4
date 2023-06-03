@@ -1,4 +1,4 @@
-# Common Crawl Dataset Downloader
+# MC4 Dataset Downloader
 
 The Common Crawl dataset downloader is an open source repository of web crawl data that can be accessed and analyzed by anyone. This repo contains a simple script (run.sh) that automates the process of downloading the Romanian Common Crawl datasets.
 
