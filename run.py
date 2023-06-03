@@ -21,9 +21,6 @@ def main(folder, temp):
     print("Change directory to c4")
     os.chdir('c4')
 
-    #print("Set GIT_LFS_SKIP_SMUDGE=1 environment variable")
-    #os.environ['GIT_LFS_SKIP_SMUDGE'] = '1'
-
     print("Pull LFS files")
     subprocess.run(['git', 'lfs', 'pull', '--include', 'multilingual/c4-ro.*.json.gz'])
     subprocess.run(f'mv multilingual/* {temp}', shell=True)
