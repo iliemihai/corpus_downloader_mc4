@@ -2,8 +2,8 @@ import subprocess
 import os, shutil, click
 
 @click.command()
-@click.option("--folder", default="./data/", help="Destination folder where to write")
-@click.option("--temp", default="./temp", help="Temporary folder used to extract archives")
+@click.option("--folder", default="../../../data/mc4/0_raw", help="Destination folder where to write")
+@click.option("--temp", default="../../../_tmp/mc4", help="Temporary folder used to extract archives")
 
 def main(folder, temp):
     folder = os.path.abspath(folder)
