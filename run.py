@@ -26,7 +26,7 @@ def main(folder, temp):
 
     print("Pull LFS files")
     subprocess.run(['git', 'lfs', 'pull', '--include', 'multilingual/c4-ro.*.json.gz'])
-    subprocess.run('mv', 'multilingual/c4-ro.*.json.gz', temp)
+    subprocess.run(f'mv multilingual/* {temp}', shell=True)
 
     print("Go back to the previous directory")
     os.chdir('..')
